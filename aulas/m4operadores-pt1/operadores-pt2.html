@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores pt2</title>
+</head>
+<body>
+    <header>Operadores especiais</header>
+    <h1>Operadores relacionais</h1>
+    <h2>Operadores de igualdade geral</h2>
+    <p>É a mesma lógica do Python</p>
+    <ul>
+        <li>></li>
+        <li><</li>
+        <li>>=</li>
+        <li><=</li>
+        <li>==</li>
+        <li>!=</li>
+    </ul>
+    <h2>Operadores de Identidade ou igualdade restrita</h2>
+    <p><strong>A lógica é diferente do Python</strong></p>
+    <p>Aqui, 5 == '5' <strong>True</strong> </p>
+    <p>Para analisar a IDENTIDADE, nós fazemos ===</p>
+    <p> 5 === '5' <em>False</em></p>
+    <p>Ao sinal "===" damos o nome de igualdade restrita e "!==" é a desigualdade restrita.</p>
+    <img src="op-pt2.png" alt="">
+    <h2>Operadores lógicos</h2>
+    <li>! (Operador de negação)</li>
+    <li>&& Operador de conjunção (Checa dois resultados ao mesmo tempo)</li>
+    <li>||</li>
+    <p>Em outras palavras, "!" corresponde a "not" em Python.</p>
+    <p>"&&" corresponde a "and"</p>
+    <p>"||" corresponde a "ou"</p>
+    <p>Para a = 5 e b = 10 e c = 8</p>
+    <img src="op2-pt2.png" alt="">
+    <h3>Ordem de precedência dos operadores lógicos</h3>
+    <ol>
+    <li>! (Não)</li>
+    <li>|| (Ou)</li>
+    <li>&& (E)</li>
+    </ol>
+    <h2>Resumo da ordem de precedência</h2>
+    <img src="op3-pt2.png" alt="">
+    <h2>Operadores ternários</h2>
+    <p>É dito ternário porque ele possui três partes. A primeira parte é o teste. A segunda parte é a resposta caso o teste seja verdadeiro. A terceira parte é a resposta caso o teste seja falso.</p>
+    <img src="op4-pt2.png" alt="">
+    <p>Exemplo:</p>
+    <p>
+        <pre>
+            <code>
+                var idade = 19
+                var res = idade < 18 ? 'Menor de Idade':'Maior de idade'
+            </code>
+        </pre>
+    </p>
+    <p>A tradução em portugol seria: Se <strong>(?)</strong> a variável idade for <strong>menor</strong> do que 18, <strong>então</strong> res = 'Menor de Idade' <strong>se não</strong> res = 'Maior de Idade'</p>
+    <p>Basicamente, é um operador if-else, no qual tanto o if quanto o else são partes obrigatórias.</p>
+
+</body>
+</html>

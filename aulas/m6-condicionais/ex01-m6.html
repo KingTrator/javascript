@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 2</title>
+    <style>
+        div:hover {
+            background-color: rgba(0, 255, 255, 0.527);
+            width: 170px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: antiquewhite; width: 300px; height: 300px;">
+        <h1 style="margin-left: 18px;">Nacionalidade</h1>
+        <p><input type="text" name="ask" id="ask" style="margin-left: 18px;"><input type="button" value="Verificar" style="background-color: black; color: white; font-weight: bold; margin-left: 3px;" onclick="nacionalidade()"></p>
+        <div id="res" style="margin-left: 18px; color: rgb(160, 17, 17); font-weight: bold;"></div>
+    </div>
+    <script>
+        function nacionalidade(nacionalidade) {
+            var nac = document.querySelector('input#ask').value // Absorve apenas o valor da Tag
+            var div = document.querySelector('div#res')
+            var nacUpper = nac.toUpperCase()
+            div.innerHTML = 'Bem-vindo ao Brasil!'
+            if (nacUpper == 'BRASIL') {
+                div.innerHTML += '<p>Você é brasileiro!</p>'
+            }
+            else {
+                div.innerHTML += '<p>Você é estrangeiro!</p>'
+            }
+        }
+    </script>
+    <!--RESUMO:
+        1. É preciso usar o método ".value" para capturar o VALOR da TAG. Se não o usar, o objeto retornado será a própria TAG e não o valor atual dela.
+    -->
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First real Js code in website</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <!--Take this notes:
+    A . input its a new tag that I'm just learning on my Js studies, even with 80 hours of HTML5 and CSS3 before, I just saw it, without having a use for it.
+    B. "name" it's input's method, one of them, but we're not using here. It's more useful to languages like PhP.
+    C. "id" it's input's method, one of them, and we're using it.
+    D. Isn't it f*cking awesome?-->
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> <input type="button" value="Clique aqui para verificar" onclick="calcular()">
+    <div id="resultado"></div>
+    <div id="limite">...</div>
+
+    </div>
+    <script>
+        function calcular() {
+            var lim = window.document.querySelector('div#limite')
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#resultado')
+            var vel = Number(txtv.value)
+            var dif = vel - 60
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
+            if (vel > 60) {
+                lim.innerHTML = `<p>Você ultrapassou o limite de velocidade em ${dif}</p>`
+            }
+        } 
+    </script>
+    <!--
+        SUMÁRIO:
+        Embora eu tenha escrito a resposta do if em outra div, seria possível concatenar a resposta na mesma div por meio de +=, se fizer = ai você substitui os valores na variável, com += você concatena as strings.
+
+        Não é possível usar document.write para escrever os dados deste exercício corretamente, preciso usar o método innerHTML em vez disso.
+
+        console.log() != document.write
+        O primeiro é visível apenas para o desenvolvedor, o segundo é visível para o usuário.
+
+        Tag "<input>" a tag input é uma tag poderosa que consegue receber uma série de entradas do usuário.
+
+        As condições em Js são muito parecidas com a lógica do Python, comparemos:
+        Em Python:
+        if x:
+            # Código identado
+        else:
+            # Código identado
+        Em Javascript:
+        if (x) {
+            // Código identado
+        }
+        else {
+            // Código identado
+        }
+        OBS: Em Javascript, podemos escrever do jeito acima ou também deste:
+        if (x) {
+            // Código identado
+        } else /* Na mesma linha */ {
+            // Código identado
+        }
+    -->
+</body>
+</html>

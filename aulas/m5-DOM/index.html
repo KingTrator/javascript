@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+    <style>
+        body {
+            background-color: rgba(255, 229, 196, 0.719);
+            color: rgb(119, 111, 111);
+        }
+        code {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <a href="eventosDOM.html">Próxima aula</a>
+    <h1>Iniciando estudos de DOM</h1>
+    <p>DOM = Documento Object Model - Este é o parágrafo 1 (equivale a 0) e a cor original era rgba(255, 28, 196, 0.719) e não este 'blue'</p>
+    <p>A cor original do background-color era um bege</p>
+    <p>É um conjunto de objetos dentro do navegador que permitem realizar ações nele.</p>
+    <p>Aqui vai o resultado</p>
+    <div>Clique em mim</div>    
+    <h2>Árvore DOM</h2>
+    <p>A raiz é "window". Dentro dela há outras três partes centrais: <br> "location" <br> "document" <br> "history"</p>
+    <p>Dentro de document temos "html".</p>
+    <p>"html" é parent de "head" and "body" e eles são child de "html"</p>
+    <p>Aqui temos um exemplo disso:</p>
+    <img src="arvore-dom.png" alt="">
+    <p>Aqui faço o uso desses objetos:</p>
+    <script>
+        window.document.write('Olá mundo. <br>')
+        window.document.write(window.document.URL)
+    </script>
+    <p>O script de cima era:
+        <pre>
+            <code>
+            window.document.write('Olá mundo. &lt;br&gt;');
+            window.document.write(window.document.URL);
+            </code>
+        </pre>
+    <p>Abaixo, vou fazer uma div:</p>
+    <div id="msg">Olá! Minha id='msg'</div>
+    </p>
+    <p>Abaixo, mais um código executado, o qual alterou as propriedades iniciais deste website (OBS, a id deste parágrafo é 'msg'):</p>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = 'blue'
+        corpo.style.background = 'darkblue'
+        window.document.write(p1.innerText)
+    </script>
+    <p>Nesses casos, eu usie as Tags para modificar os elementos, mas é possível realizar isto <br>por meio do ID, Nome, Classe e Seletor</p>
+    <p>A melhor forma de fazer seleções, segundo recomendações, é por Selector, Seletor, quando possível.</p>
+    <p>Exemplo:</p>
+    <script>
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'blue'
+    </script>
+    <p>Além do primeiro código, já mostrado, também foram usados os códigos:</p>
+    <pre>
+        <code>
+            var corpo = window.document.body (armazena em "corpo" os child de body)
+            var p1 = window.documet.getElementByTagName('p')[0] (selecione a primeira (0) tag p)
+            p1.style.color = 'blue' (troca a cor do parágrafo para blue)
+            corpo.style.backgroud = 'darkblue' (mudou a cor para um azul horrível)
+            window.document.write(p1.innerText) (Escreve o texto interno (inner) presente em p1)
+        </code>
+    </pre>
+    <p>O último código foi:</p>
+    <pre>
+        <code>
+            var d = window.document.querySelector('div#msg') (a var d usa um seletor especificado por "div" para achar a Id #, como IDs são singulares, não é preciso especificá-la por meio de colchetes [n])
+            d.style.color = 'blue' (Altero a cor da minha variável para blue)
+        </code>
+    </pre>
+    <p>A cor que o script primeiro alterou era um lixo, vou voltar para a original com outro script, este:</p>
+    <pre>
+        <code>
+            var corpo-de-fundo = window.document.querySelector('body')
+            corpo-de-fundo.style.background = 'rgba(255, 228, 196, 0.719)'
+        </code>
+    </pre>
+    <script>
+        var corpoDeFundo = window.document.querySelector('body')
+        corpoDeFundo.style.background = 'bisque'
+    </script>
+    <p>Na verdade, uma correção: a variável usada foi corpoDeFundo, pois na sintaxe do Js não se aceita "-".</p>
+</body>
+</html>

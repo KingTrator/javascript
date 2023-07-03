@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data treatment</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data treatment</h1>
+    <p>Now we're going to learn a bit of data treatment</p>
+    <script>
+        var name = window.prompt("What's your name?")
+        window.alert("It's a pleasure to meet you " + name) /*Maneira antiga de pôr uma variável.*/
+        window.alert(`Alright, ${name}, welcome.`) // alternativa 
+        var number_1 = Number(window.prompt(`Hey, ${name}, could you please digit a number? `))
+        var number_2 = Number(window.prompt(`Thanks! Digit another`))
+        window.alert(`Ha ha! Nice. Let me show you how well I can do math sum. ${number_1} + ${number_2} = ${number_1 + number_2}`)
+        var string_number = number_1 + number_2
+        window.alert("I told you, boy! Hahaha. I'm good with that. Just to remember, the result was: " + String(string_number)) // string + string = "+" faz concatenação. Números = soma.
+        /* Para conseguir realizar somas, é preciso primeiro transformar o valor em um valor numérico. Int, "float" ou simplesmente number e o próprio Js entende se são dois int ou se tem float e talz, igualzinho no Python. */
+        /* Number (Js irá escolher) Number.parseInt (calculará apenas a parte inteira) Number.parseFloat (calculará com casas decimais) */
+        
+        
+    </script>
+    
+</body>
+</html>

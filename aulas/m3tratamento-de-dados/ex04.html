@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More data treatment</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var name = window.prompt("What's your name? ")
+        document.write(`Your name has ${name.length} letters. <br>`)
+        document.write(`Also, your name in uppercase is ${name.toUpperCase()}. <br>`)
+        document.write(`Oh! And in lowercase is ${name.toLowerCase()}. <br>`)
+        var salarium = 1500.859
+        document.write(salarium )
+        salarium = salarium.toFixed(2) // Aproxima pro inteiro + próximo
+        document.write(`<br>`)
+        document.write(salarium)
+        salarium = salarium.replace('.', ',')
+        var salarium_real = salarium.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // Por alguma razão, não funcionou
+        document.write(`<br>`)
+        document.write(salarium_real)
+    </script>
+    <!--métodos novos: toUpperCase(), toLowerCase().
+    Função nova: document.write
+    Nota: Você pode colocar as tags de HTML5 dentro das crases, como fiz no primeiro caso e segundo caso.-->
+</body>
+</html>
