@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Tabuada</h1></header>
+    <main>
+        <div>
+            <label for="numero" id="label_numero">Digite um número: </label>
+            <input type="number" id="numero" name="numero" min="1" max="10">
+            <button onclick="enviar()">Enviar</button>
+            <select name="tabuada" id="seltab" size="10"><acima><option value="">Digite um número acima</option></acima></select>
+        </div>
+    </main>
+    <footer> <a href="https://github.com/KingTrator" target="_blank" rel="dofollow">&copy; KingTrator</a></footer>
+    <script src="javascript.js">
+    </script>
+</body>
+</html>
+<!--
+    Retorno!
+    Faz tempo desde que deixei o front-end. É estranho voltar e ter esquecido de coisas básicas, mas logo lembro.
+    Aprofundando conceitos:
+    <label> (rótulo) cria um nome para o input, útil para leitores visuais.
+    <input> (entrada) os parâmetros dessa tag, genericamente escrita, são:
+    <input type="" id="" name="" min="" max="" step="">
+    1. 'type' é um dos tipos aceitos de inputs padrão.
+    2. id e name são identificadores. 'id' é identificador front-end, 'name' é identificador back-end (vai para o servidor).
+    3. 'min' e 'max' são o mínimo e máximo valor permitido.
+    4. 'step' são os passos entre os valores, o default é step="1", ou seja, de um em um.
+    Mas você pode ajustá-lo para aceitar floating numbers e por aí vai.
+    "<select>" Cria o retângulo + barra de rolagem (seleção, se você não determinar o parâmetro "size") 
+    para inserir os elementos option.
+    "<option>" tag usada para quando há uma sequência de opções.
+-->
